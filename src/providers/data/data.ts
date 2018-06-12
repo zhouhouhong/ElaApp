@@ -1,4 +1,4 @@
-import { Storage }  from '@ionic/storage';
+import { Storage } from '@ionic/storage';
 import {Injectable} from '@angular/core'; 
 /*
   Generated class for the DataProvider provider.

@@ -11,8 +11,8 @@ import { AddItemPage } from '../pages/add-item/add-item';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-//import { Storage } from '@ionic/storage';
-//import { DataProvider } from '../providers/data/data';
+import { IonicStorageModule } from '@ionic/storage';
+import { DataProvider } from '../providers/data/data';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+	IonicStorageModule.forRoot(HomePage)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,11 +41,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}//,
-   // Storage, DataProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+	 IonicStorageModule,
+     DataProvider
   ]
  
-  
-  //providers: [Storage, DataProvider]
+
 })
 export class AppModule {}

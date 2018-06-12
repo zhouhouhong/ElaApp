@@ -17,7 +17,31 @@ Elastos虚拟机具备如下特点
 具体的写法可用参考src\pages\home\home.ts
 
 运行方式
+查看预览效果
 目前的代码是基于Ionic来开发的，可以直接使用chrome浏览器来打开www文件夹下的index.html即可
+
+如果想基于ionci来调试运行代码
+###  安装相关库
+
+##### 安装 ionic|cordova
+> npm install -g ionic cordova 
+##### 安装 依赖包
+> npm install
+
+
+### 运行切换到代码目录下
+
+#### 1、web端运行：
+>ionic serve 
+#### 2、安卓端运行：
+>ionic cordova run android --device
+#### 3、安卓端-调试模式：
+> ionic cordova run android -l -c -s // 挂载本地页面、实时更新，需要选择本地IP
+#### 4、android studio 加载项目启动：
+> 因为网站是编译打包后webview从assets目录中加载，若从android studio直接启动安卓项目，建议重新执行2或3命令重新打包
+
+
+
 
 
 
