@@ -3,7 +3,6 @@ import { ModalController, NavController } from 'ionic-angular';
 
 import { AddItemPage } from '../add-item/add-item';
 
-import { IonicStorageModule } from '@ionic/storage';
 import { DataProvider } from '../../providers/data/data';
 
 
@@ -11,10 +10,8 @@ import { DataProvider } from '../../providers/data/data';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
-  //providers :[//这需要引入
-  //Storage
-  //]
+  templateUrl: 'home.html',
+  providers :[DataProvider]
 })
 export class HomePage {
  public items;
